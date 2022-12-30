@@ -1,0 +1,9 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <h1>Hello, {{ current_user.username }}!</h1>
+    <h2>Welcome to the family cookbook!</h2>
+    {% for recipe in recipes %}
+    <div><p>{{ recipe.author.username }} says: <b>{{ recipe.body }}</b></p></div>
+    {% endfor %}
+{% endblock %}
